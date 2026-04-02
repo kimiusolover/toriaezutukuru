@@ -7,7 +7,7 @@ on:
       - 'master'
   pull_request:
   workflow_dispatch:
-
+  
 jobs:
   test_powershell:
     name: WindowsPowerShell
@@ -15,12 +15,14 @@ jobs:
     steps:
       - name: Checkout Bucket
         uses: actions/checkout@main
-        with:
+        with: 
+          node-versions:  latest
           fetch-depth: 2
           path: my_bucket
       - name: Checkout Scoop
         uses: actions/checkout@main
         with:
+          node-versions:  latest
           repository: ScoopInstaller/Scoop
           path: scoop_core
       - name: Init Test Suite
@@ -40,6 +42,7 @@ jobs:
       - name: Checkout Bucket
         uses: actions/checkout@main
         with:
+           node-versions:  latest
           fetch-depth: 2
           path: my_bucket
       - name: Checkout Scoop
@@ -50,6 +53,7 @@ jobs:
       - name: Init Test Suite
         uses: potatoqualitee/psmodulecache@main
         with:
+           node-versions:  latest
           modules-to-cache: BuildHelpers
           shell: pwsh
       - name: Test Bucket
