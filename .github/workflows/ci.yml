@@ -21,7 +21,6 @@ jobs:
       - name: Checkout Scoop
         uses: actions/checkout@main
         with:
-          node-versions:  latest
           repository: ScoopInstaller/Scoop
           path: scoop_core
       - name: Init Test Suite
