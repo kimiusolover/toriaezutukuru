@@ -6,7 +6,8 @@ on:
       - 'main'
       - 'master'
   pull_request:
-  workflow_dispatch: 
+  workflow_dispatch:
+  
 jobs:
   test_powershell:
     name: WindowsPowerShell
@@ -15,6 +16,7 @@ jobs:
       - name: Checkout Bucket
         uses: actions/checkout@main
         with: 
+        
           fetch-depth: 2
           path: my_bucket
       - name: Checkout Scoop
