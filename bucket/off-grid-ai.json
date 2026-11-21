@@ -1,0 +1,31 @@
+{
+    "version": "0.0.59",
+    "description": "Local AI desktop application.",
+    "homepage": "https://getoffgridai.co/",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/off-grid-ai/OGAD/releases/download/v0.0.59/off-grid-ai-0.0.59-x64.nsis.7z",
+            "hash": "061e83accd0b5a82a094607cbd533717d80a84ab0af5a149bc8b17ee1a03b2e5"
+        }
+    },
+    "shortcuts": [
+        [
+            "off-grid-ai.exe",
+            "Off Grid AI Desktop"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/off-grid-ai/OGAD"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/off-grid-ai/OGAD/releases/download/v$version/off-grid-ai-$version-x64.nsis.7z"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/off-grid-ai/OGAD/releases/download/v$version/windows-packages.sha256"
+        }
+    }
+}

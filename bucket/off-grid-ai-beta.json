@@ -1,0 +1,18 @@
+{
+    "version": "0.0.57-beta.154",
+    "description": "Local AI desktop application (pinned beta release).",
+    "homepage": "https://getoffgridai.co/",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/off-grid-ai/OGAD/releases/download/v0.0.57-beta.154/off-grid-ai-0.0.57-beta.154-x64.nsis.7z",
+            "hash": "c9474ec68473407f2ae779db9c49d28c2197c3449d2ac75ff29c22450925749e"
+        }
+    },
+    "shortcuts": [
+        [
+            "off-grid-ai.exe",
+            "Off Grid AI Desktop (Beta)"
+        ]
+    ]
+}
